@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/classic/index",
+    "pages/book/index",
+    "pages/my/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,12 @@
+<!--components/episode/index.wxml-->
+<view class="container">
+  <view class='index-wrap'>
+    <text class='no'>NO.</text>
+    <text class='index'>08</text>
+  </view>
+  <view class="line"></view>
+  <view class='wrap'>
+    <text class='month'>四月</text>
+    <text class='year'>2020</text>
+  </view>
+</view>

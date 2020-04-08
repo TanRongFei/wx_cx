@@ -1,0 +1,7 @@
+<view class="header">
+  <v-episode />
+  <v-like bind:like="onLike"/>
+</view>
+<view class="container">
+  <v-movie detail="{{detail}}" />
+</view>

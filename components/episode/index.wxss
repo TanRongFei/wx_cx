@@ -1,0 +1,48 @@
+/* components/episode/index.wxss */
+.container{
+  display: inline-flex;
+  align-items: center;
+  color: #000000;
+}
+
+.index-wrap{
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.no{
+  font-size: 32rpx;
+}
+
+.index{
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 7px;
+}
+
+.line{
+  display: inline-flex;
+  margin-right: 7px;
+  border-left: 1px solid black;
+  height: 24px;
+}
+
+.wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  justify-content: space-around;
+}
+
+.month {
+  font-size: 12px;
+  line-height: 12px;
+  padding-bottom: 2px;
+  margin-right: 2rpx;
+}
+
+.year {
+  font-size: 10px;
+  line-height: 10px;
+  padding-bottom: 3px;
+}

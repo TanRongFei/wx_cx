@@ -1,0 +1,8 @@
+<!--pages/classic/components/movie/index.wxml-->
+<view class="container">
+  <view class="wrap">
+    <image class="bg" src="{{detail.image}}" />
+    <image class="tag" src='./images/movie@tag.png' />
+  </view>
+  <text class="content">{{detail.content}}</text>
+</view>

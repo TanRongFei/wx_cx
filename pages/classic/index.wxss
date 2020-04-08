@@ -1,0 +1,6 @@
+/* pages/classic/index.wxss */
+.header{
+  padding: 10rpx 26rpx;
+  display: flex;
+  justify-content: space-between;
+}

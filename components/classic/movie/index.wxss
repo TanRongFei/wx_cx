@@ -1,0 +1,24 @@
+/* pages/classic/components/movie/index.wxss */
+.wrap{
+  position: relative;
+  margin-bottom: 120rpx;
+}
+
+.bg{
+  width: 750rpx;
+  height: 480rpx;
+}
+
+.tag{
+  position: absolute;
+  bottom: -75rpx;
+  left: 20rpx;
+  width: 46rpx;
+  height: 142rpx;
+}
+
+.content{
+  padding: 0 40rpx;
+  display: flex;
+  justify-content: center;
+}
