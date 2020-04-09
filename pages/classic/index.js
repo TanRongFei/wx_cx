@@ -11,7 +11,9 @@ Page({
   data: {
     like_status: false,
     fav_nums: 0,
-    detail: {}
+    detail: {},
+    isLatest: false,
+    isLast: false
   },
 
   /**
@@ -20,10 +22,14 @@ Page({
   onLoad: function (options) {
     classicModule.latest().then(res => {
       console.log(res)
+      let isLast = false
+      res.index === 1 ? isLast = true : isLast = false
       this.setData({
         detail: res,
         like_status: res.like_status,
-        fav_nums: 0
+        fav_nums: 0,
+        isLatest: true,
+        isLast
       })
     })
   },
@@ -56,8 +62,32 @@ Page({
 
   },
 
+  /**
+   * 点赞
+   * */
   onLike(e) {
     console.log(e)
+  },
+  
+  /**
+  * 获取期刊
+  * */
+  handleNavi(e) {
+    classicModule.fetchClassic(this.data.detail.index, e.detail.type).then(res => {
+      let isLast = false
+      let isLatest = false
+
+      res.index === 2 ? isLast = true : isLast = false
+      wx.getStorageSync('latest') === res.index ? isLatest = true : isLatest = false
+      
+      this.setData({
+        detail: res,
+        like_status: res.like_status,
+        fav_nums: 0,
+        isLatest,
+        isLast
+      })
+    })
   },
 
   /**

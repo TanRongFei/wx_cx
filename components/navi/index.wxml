@@ -1,0 +1,8 @@
+<!--components/navi/index.wxml-->
+<view class="container">
+    <view class="wrap">
+        <image bind:tap="onPrevious" class="btn" src="{{isLatest ? disLeftSrc : leftSrc}}" />
+        <text class="content">{{title}}</text>
+        <image bind:tap="onNext" class="btn" src="{{isLast ? disRightSrc : rightSrc}}" />
+    </view>
+</view>

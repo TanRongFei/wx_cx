@@ -1,2 +1,8 @@
 <!--pages/classic/components/music/index.wxml-->
-<text>pages/classic/components/music/index.wxml</text>
+<view class="container">
+    <view class="wrap">
+        <image class="bg" src="{{image}}" />
+        <image class="tag" src='./images/music@tag.png' />
+    </view>
+    <text class="content">{{content}}</text>
+</view>

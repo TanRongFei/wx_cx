@@ -1,7 +1,11 @@
 <view class="header">
-  <v-episode />
+  <v-episode index="{{detail.index}}" />
   <v-like bind:like="onLike"/>
 </view>
 <view class="container">
-  <v-movie detail="{{detail}}" />
+  <v-movie hidden="{{detail.type === 100}}" image="{{detail.image}}" content="{{detail.content}}" />
+  <v-essay hidden="{{detail.type === 200}}" image="{{detail.image}}" content="{{detail.content}}" />
+  <v-music wx:if="{{detail.type === 300}}" image="{{detail.image}}" content="{{detail.content}}" />
 </view>
+
+<v-navi bind:handleNavi="handleNavi" isLatest="{{isLatest}}" isLast="{{isLast}}" title="{{detail.title}}"/>

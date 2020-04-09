@@ -1,2 +1,8 @@
 <!--pages/classic/components/essay/index.wxml-->
-<text>pages/classic/components/essay/index.wxml</text>
+<view hidden="{{hidden}}" class="container">
+    <view class="wrap">
+        <image class="bg" src="{{image}}" />
+        <image class="tag" src='./images/essay@tag.png' />
+    </view>
+    <text class="content">{{content}}</text>
+</view>
