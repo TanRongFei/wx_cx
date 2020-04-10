@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "v-book": "/components/book/index",
+    "v-comments": "/components/comments/index"
+  }
+}

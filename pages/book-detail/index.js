@@ -1,4 +1,4 @@
-// pages/book/index.js
+// pages/book-detail/index.js
 import Book from '../../modules/book'
 
 const bookModule = new Book()
@@ -9,25 +9,29 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hotList: []
+    book: null,
+    comments: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getHotList()
-  },
-  
-  getHotList() {
-    bookModule.hotList().then(res => {
-      console.log(res)
+    bookModule.bookDetail(options.bid).then(res => {
+      console.log(res);
       this.setData({
-        hotList: res
+        book: res
       })
     })
-  },
   
+    bookModule.shortComment(options.bid).then(res => {
+      this.setData({
+        comments: res.comments
+      })
+      console.log(res.comments)
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

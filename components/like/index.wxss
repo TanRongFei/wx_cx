@@ -1,4 +1,7 @@
 /* components/like/index.wxss */
+.container{
+  margin-right: 30rpx;
+}
 .container .img{
   display: inline-flex;
   width: 32rpx;

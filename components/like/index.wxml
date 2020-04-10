@@ -1,5 +1,5 @@
 <!--components/like/index.wxml-->
 <view class="container" bind:tap="onLike">
-  <image class="img" src="{{isLike?likeSrc:disLikeSrc}}" />
-  <text class="text">{{count}}</text>
+  <image class="img" src="{{like_status?likeSrc:disLikeSrc}}" />
+  <text class="text">{{fav_nums}}</text>
 </view>

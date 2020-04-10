@@ -1,0 +1,9 @@
+<!--components/book/index.wxml-->
+<view class="container" bind:tap="handleDetail" >
+    <image src="{{detail.image}}" class="bg" />
+    <view class="wrap">
+        <text class="title">{{detail.title}}</text>
+        <text class="author">{{detail.author}}</text>
+        <text class="num">{{detail.fav_nums}} 喜欢</text>
+    </view>
+</view>

@@ -1,0 +1,9 @@
+/* components/comments/index.wxss */
+.container{
+    font-size: 24rpx;
+    background: #f5f5f5;
+    border-radius: 4rpx;
+    padding: 6rpx 10rpx;
+    margin: 10rpx;
+}
+

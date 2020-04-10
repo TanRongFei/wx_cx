@@ -1,7 +1,10 @@
 <!--pages/classic/components/music/index.wxml-->
 <view class="container">
     <view class="wrap">
-        <image class="bg" src="{{image}}" />
+        <view class="wrap-bg">
+            <image bind:tap="onPlay" class="play-btn" src="{{playing? pauseSrc : playSrc}}"></image>
+            <image class="bg {{playing ? 'turn' : ''}}" src="{{image}}" />
+        </view>
         <image class="tag" src='./images/music@tag.png' />
     </view>
     <text class="content">{{content}}</text>

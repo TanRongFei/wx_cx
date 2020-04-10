@@ -5,8 +5,14 @@ Component({
    */
   properties: {
     title: String,
-    isLatest: Boolean,
-    isLast: Boolean
+    isLatest: {
+      type: Boolean,
+      value: true
+    },
+    isLast: {
+      type: Boolean,
+      value: true
+    }
   },
 
   /**

@@ -1,0 +1,6 @@
+<!--components/comments/index.wxml-->
+<view class="container tag-class">
+    <slot name="before"></slot>
+    <text>{{content}}</text>
+    <slot name="after"></slot>
+</view>

@@ -1,0 +1,8 @@
+module.exports = {
+  limit: function(arr, n) {
+    var l = 0
+    n ? l = n : l = 10
+
+    return arr.slice(0, l)
+  }
+}

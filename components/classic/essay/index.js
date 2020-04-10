@@ -1,13 +1,16 @@
 // pages/classic/components/essay/index.js
+import ClassicBeh from '../classic_beh'
+
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    image: String,
-    content: String,
-    hidden: Number
   },
+  
+  behaviors: [
+    ClassicBeh
+  ],
 
   /**
    * 组件的初始数据

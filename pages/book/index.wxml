@@ -1,2 +1,19 @@
 <!--pages/book/index.wxml-->
-<text>pages/book/index.wxml</text>
+<view class="book">
+    <view class="search-header">
+        <view class="wrap">
+            <image class="icon" src="/images/icon/search.png"></image>
+            <text class="title">搜索书籍</text>
+        </view>
+    </view>
+
+    <view class="quality">
+        <image class="quality-img" src="/images/book/quality.png"></image>
+    </view>
+
+    <view class="container">
+        <block wx:for="{{hotList}}" wx:key="id">
+            <v-book class="book-item" detail="{{item}}"></v-book>
+        </block>
+    </view>
+</view>

@@ -1,0 +1,36 @@
+<!--pages/book-detail/index.wxml-->
+<wxs src="../../utils/filters.wxs" module="filters"></wxs>
+<view class="container">
+    <view class="wrap cover">
+        <v-book detail="{{book}}" />
+    </view>
+
+    <view class="wrap">
+        <text class="title">短评</text>
+        <view class="main comments">
+            <block wx:for="{{filters.limit(comments, 10)}}" wx:key="index">
+                <v-comments tag-class="{{tool.heightClass(index)}}" content="{{item.content}}">
+                    <text class="comments-num" slot="after">{{'+' + item.nums}}</text>
+                </v-comments>
+            </block>
+        </view>
+    </view>
+
+    <view class="wrap">
+        <text class="title">内容简介</text>
+        <view class="main"></view>
+    </view>
+
+    <view class="wrap">
+        <text class="title">书本信息</text>
+        <view class="main"></view>
+    </view>
+</view>
+
+<wxs module="tool">
+    module.exports = {
+        heightClass: function(n) {
+            return ('ex-tag' + (n + 1))
+        }
+    }
+</wxs>

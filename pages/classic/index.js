@@ -1,6 +1,8 @@
 import Classic from '../../modules/classic'
+import Like from '../../modules/like'
 
 const classicModule = new Classic()
+const likeModule = new Like()
 
 // pages/classic/index.js
 Page({
@@ -27,7 +29,7 @@ Page({
       this.setData({
         detail: res,
         like_status: res.like_status,
-        fav_nums: 0,
+        fav_nums: res.fav_nums,
         isLatest: true,
         isLast
       })
@@ -61,13 +63,6 @@ Page({
   onUnload: function () {
 
   },
-
-  /**
-   * 点赞
-   * */
-  onLike(e) {
-    console.log(e)
-  },
   
   /**
   * 获取期刊
@@ -83,10 +78,25 @@ Page({
       this.setData({
         detail: res,
         like_status: res.like_status,
-        fav_nums: 0,
+        fav_nums: res.fav_nums,
         isLatest,
         isLast
       })
+    })
+  },
+  
+  /**
+   * 点赞/取消点赞
+   * */
+  onLike() {
+    likeModule.onLike(this.data.like_status, this.data.detail.id, this.data.detail.type)
+      .then(() => {
+        return likeModule.fetchLike(this.data.detail.type, this.data.detail.id)
+      }).then(res => {
+        this.setData({
+          like_status: res.like_status,
+          fav_nums: res.fav_nums,
+        })
     })
   },
 

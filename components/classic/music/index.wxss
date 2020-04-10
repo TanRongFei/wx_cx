@@ -2,11 +2,8 @@
 .wrap{
     position: relative;
     margin-bottom: 120rpx;
-}
-
-.bg{
-    width: 750rpx;
-    height: 480rpx;
+    display: flex;
+    justify-content: center;
 }
 
 .tag{
@@ -22,4 +19,42 @@
     display: flex;
     justify-content: center;
     color: #000000;
+}
+
+.wrap-bg{
+    position: relative;
+    width: 480rpx;
+    height: 480rpx;
+    /*border-radius: 240rpx;*/
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap-bg .bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.wrap-bg .play-btn{
+    width: 120rpx;
+    height: 120rpx;
+    position: relative;
+    z-index: 99;
+}
+
+.turn{
+    animation: turn 8s linear infinite;
+}
+
+@keyframes turn {
+    0%{
+        -webkit-transform: rotate(0deg)
+    }
+    100%{
+        -webkit-transform: rotate(360deg)
+    }
 }

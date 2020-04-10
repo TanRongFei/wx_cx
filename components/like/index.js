@@ -4,8 +4,8 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    count: Number,
-    isLike: Boolean
+    fav_nums: Number,
+    like_status: Boolean
   },
 
   /**

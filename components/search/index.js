@@ -1,14 +1,11 @@
-// pages/classic/components/movie/index.js
-import ClassicBeh from '../classic_beh'
-
+// components/search/index.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
+
   },
-  
-  behaviors: [ClassicBeh],
 
   /**
    * 组件的初始数据

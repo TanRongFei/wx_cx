@@ -1,14 +1,17 @@
-// pages/classic/components/movie/index.js
-import ClassicBeh from '../classic_beh'
-
+// components/comments/index.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
+    content: String
   },
   
-  behaviors: [ClassicBeh],
+  options: {
+    multipleSlots: true
+  },
+  
+  externalClasses: ['tag-class'],
 
   /**
    * 组件的初始数据
